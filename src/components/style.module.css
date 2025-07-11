@@ -1,0 +1,39 @@
+.button {
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+  }
+  .primary,.success,.danger{
+    border: none;
+  }
+  .primary {
+    background-color: #007bff;
+    color: white;
+  }
+  .icon {
+    display: flex;
+    align-items: center;
+  }
+  .success {
+    background-color: #38c172;
+    color: white;
+  }
+  .warning {
+    background-color: rgb(245, 200, 0);
+    color: white;
+  }
+  .danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  

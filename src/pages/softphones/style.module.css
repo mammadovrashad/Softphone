@@ -1,0 +1,33 @@
+.container{
+    margin: auto;
+    width: 500px;
+    background-color: rgb(199, 199, 199);
+    height: 80dvh;
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+   
+}
+.title{
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: rgb(25, 138, 214);
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.callPanel{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.callLayout{
+    flex-grow: 0.9;
+}
