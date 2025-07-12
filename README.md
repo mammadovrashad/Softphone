@@ -10,7 +10,7 @@ Layihə React ilə hazırlanmış sadə bir softphone (software phone) istifadə
 - Mikrofon səsini söndürüb yandırmaq
 - Audio və video axınlarının browser-da göstərilməsi
 
-## Texnologiyalar və Asılılıqlar
+## Texnologiyalar
 
 - **React 19.1.0** - Əsas frontend framework
 - **TypeScript** - Type-safe development
@@ -30,7 +30,7 @@ Layihə React ilə hazırlanmış sadə bir softphone (software phone) istifadə
 1. Layihəni klonlayın:
 ```bash
 git clone <repository-url>
-cd ReactRTC/softphone
+cd softphone
 ```
 
 2. Lazımı paketləri quraşdırın:
