@@ -1,69 +1,78 @@
-# React + TypeScript + Vite
+# Softphone UI React Komponenti
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Layihə React ilə hazırlanmış sadə bir softphone (software phone) istifadəçi interfeysidir. İstifadəçi mikrofon və kameranı işə salaraq zəngə başlaya, zəngi səsini bağlayıb aça və zəngi sonlandıra bilər.
 
-Currently, two official plugins are available:
+## Xüsusiyyətlər
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- İstifadəçinin mikrofon və kameraya giriş əldə etməsi (getUserMedia API vasitəsilə)
+- Zəngin başlaması, davam etməsi və sonlandırılması
+- Zəng müddətinin saniyə dəqiqə formatında sayğacla göstərilməsi
+- Mikrofon səsini söndürüb yandırmaq
+- Audio və video axınlarının browser-da göstərilməsi
 
-## Expanding the ESLint configuration
+## Texnologiyalar və Asılılıqlar
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 19.1.0** - Əsas frontend framework
+- **TypeScript** - Type-safe development
+- **Vite** - Build tool və development server
+- **CSS Modules** - Scoped styling
+- **classnames** - Conditional CSS class management
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Quraşdırma
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Tələblər
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js (v16 və ya daha yuxarı)
+- npm və ya yarn
+
+### Quraşdırma addımları
+
+1. Layihəni klonlayın:
+```bash
+git clone <repository-url>
+cd ReactRTC/softphone
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Lazımı paketləri quraşdırın:
+```bash
+npm install
+# və ya
+yarn install
 ```
+
+3. Development serveri başladın:
+```bash
+npm start
+# və ya
+yarn start
+```
+
+
+## İstifadə
+
+### Zəng başlatmaq
+1. "Zəngi Başlat" düyməsinə basın
+2. Browser sizdən mikrofon və kamera icazəsi istəyəcək
+3. İcazə verdikdən sonra video və audio axınları başlayacaq
+
+### Zəng idarəetməsi
+- **Səsi bağla/aç**: Mikrofonu söndürmək və ya yandırmaq üçün
+- **Zəngi Sonlandır**: Aktiv zəngi dayandırmaq üçün
+
+### Zəng müddəti
+Zəng başladıqdan sonra ekranda zəng müddəti dəqiqə:saniyə formatında göstəriləcək
+
+
+## API istifadəsi
+
+Layihə aşağıdakı Web API-lərindən istifadə edir:
+
+- **getUserMedia()**: Mikrofon və kamera axınlarını əldə etmək üçün
+- **MediaStream**: Audio və video axınlarını idarə etmək üçün
+- **MediaTrack**: Fərdi audio/video yollarını idarə etmək üçün
+
+## Təhlükəsizlik
+- Layihə yalnız HTTPS və ya localhost-da işləyir (getUserMedia tələbi)
+- İstifadəçi icazəsi tələb olunur
+- Media axınları yalnız client tərəfdə işlənir
+

@@ -1,33 +1,61 @@
-.container{
+.container {
     margin: auto;
-    width: 500px;
-    background-color: rgb(199, 199, 199);
-    height: 80dvh;
+    width: 480px;
+    background-color: rgb(241, 241, 241);
+    height: 95dvh;
     border-radius: 10px;
     margin-top: 10px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-   
+    box-shadow: #fff 10px 10px;
+
 }
-.title{
+
+.title {
     height: 55px;
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     background-color: rgb(25, 138, 214);
     color: white;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     font-weight: 600;
 }
 
-.callPanel{
+.callPanel {
     display: flex;
     justify-content: space-around;
+    padding: 0px 10px;
+    gap: 10px;
 
 }
 
-.callLayout{
+.callLayout {
     flex-grow: 0.9;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        padding: 10px;
+        background-color: rgb(153, 204, 238);
+        width: 50%;
+        margin: 10px;
+        border-radius: 2rem;
+        color: rgb(0, 91, 119);
+        font-weight: 600;
+    }
+
+    audio {
+        padding: 0px 15px;
+    }
+
+}
+
+.videoHidden,
+.audioHidden {
+    display: none;
 }
